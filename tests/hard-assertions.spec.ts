@@ -12,7 +12,8 @@ test.beforeEach(async({page})=>{
     username_locator=page.locator("#user-name")
     password_locator=page.locator("#password")
     login_locator=page.getByRole("button", {name: "Login"});
-    await page.goto("https://www.saucedemo.com/");
+    // await page.goto("https://www.saucedemo.com/");
+    await page.goto("/");
     await expect(page).toHaveTitle("Swag Labs");
     await expect(username_locator).toHaveAttribute("placeholder", "Username")
     await expect(password_locator).toHaveAttribute("placeholder", "Password");
