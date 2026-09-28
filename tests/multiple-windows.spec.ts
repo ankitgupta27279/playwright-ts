@@ -26,7 +26,7 @@ test('creating multiple pages with context', async ()=>{
     await browser.close();
 });
 
-test.only('handling multiple windows/pages', async()=>{
+test('handling multiple windows/pages', async()=>{
     const browser = await chromium.launch();
     const context = await browser.newContext();
     const page = await context.newPage();
